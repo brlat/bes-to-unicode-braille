@@ -33,7 +33,7 @@
 
     <div class="container is-fluid">
         <main class="section">
-          <Braille :braille="bes" :isBrf="isBrf"></Braille>
+          <Braille :braille="bes"></Braille>
         </main>
     </div>
 
