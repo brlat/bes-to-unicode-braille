@@ -15,14 +15,6 @@
             <div class="navbar-item">
               <button class="button is-small is-light" id="closeFile" :disabled="isFileClosed" @click="onFileClose">{{ t('closeFile') }}</button>
             </div>
-            <div class="navbar-item">
-              <div class="select is-small">
-                <select v-model="locale" aria-label="Language">
-                  <option value="ja">日本語</option>
-                  <option value="en">English</option>
-                </select>
-              </div>
-            </div>
           </div>
           <div class="navbar-end">
             <p class="navbar-item">⠰⠠⠃⠠⠑⠠⠎⠀⠤⠢⠥⠃⠙⠀⠘⠭⠒⠁⠒</p>
