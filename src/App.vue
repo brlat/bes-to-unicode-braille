@@ -31,8 +31,8 @@
 
     <footer class="footer">
       <div class="content has-text-centered">
-        <p>
-          <strong>{{ t('title') }}</strong> by <a href="https://twitter.com/shunito">Shunsuke Ito</a>.
+        <p>Based on 
+          <strong>UniBraille Viewer</strong> by <a href="https://twitter.com/shunito">Shunsuke Ito</a>.
           The <a href="https://github.com/shunito/bes-viewer">source code</a> is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
         </p>
       </div>
