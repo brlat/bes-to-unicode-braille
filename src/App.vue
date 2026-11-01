@@ -3,7 +3,7 @@
     <header>
       <nav class="navbar is-dark" :title="t('title')" id="main-header">
         <div class="navbar-brand">
-          <h1 class="navbar-item">.besをユニコード点字に変換</h1>
+          <h1 class="navbar-item">サピエ図書館の.bes点字データをユニコード点字に変換</h1>
         </div>
 
         <div id="navbarMenu" class="navbar-menu is-active">
@@ -15,7 +15,7 @@
 
           </div>
           <div class="navbar-end">
-            <p class="navbar-item">「ファイル」ボタンを押して.besファイルを選択してください</p>
+            <p class="navbar-item">「ファイル」ボタンを押して、たとえば、「N0518098-001.BES」のようなファイルを選択してください</p>
           </div>
         </div>
       </nav>
