@@ -12,9 +12,7 @@
               <label for="file">{{ t('selectFile') }}</label>
               <input type="file" id="file" name="file" accept=".bes,.brf,.brl,.bse" @change="onFileChange" ref="fileInput" />
             </div>
-            <!-- <div class="navbar-item">
-              <button class="button is-small is-light" id="closeFile" :disabled="isFileClosed" @click="onFileClose">{{ t('closeFile') }}</button>
-            </div> -->
+
           </div>
           <div class="navbar-end">
             <p class="navbar-item">-----</p>
