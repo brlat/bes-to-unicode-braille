@@ -3,7 +3,7 @@
     <header>
       <nav class="navbar is-dark" :title="t('title')" id="main-header">
         <div class="navbar-brand">
-          <h1 class="navbar-item">{{ t('title') }}</h1>
+          <h1 class="navbar-item">.besをユニコード点字に変換</h1>
         </div>
 
         <div id="navbarMenu" class="navbar-menu is-active">
