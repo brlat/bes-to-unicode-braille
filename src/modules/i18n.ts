@@ -4,13 +4,13 @@ export type Locale = 'ja' | 'en'
 
 const messages = {
   ja: {
-    title: 'UniBraille Viewer α',
-    selectFile: '.besファイル',
+    title: '.besをユニコード点字に変換',
+    selectFile: 'ファイル',
     closeFile: 'ファイルを閉じる',
     yomiLabel: '読み',
     show: '表示',
     hide: '非表示',
-    placeholder: '「.besファイル」ボタンを押してください',
+    placeholder: '「ファイル」ボタンを押して.besファイルを選択してください',
     backToToc: 'もくじへ もどる',
     toc: '目次',
     backToTocBraille: '⠾⠩⠐⠳⠯⠀⠾⠐⠞⠙'
