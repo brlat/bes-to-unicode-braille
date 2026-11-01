@@ -31,6 +31,7 @@
 
     <footer class="footer">
       <div class="content has-text-centered">
+<hr><p>「.besをユニコード点字に変換」 by <a href="https://github.com/brlat/bes-to-unicode-braille">brlat</a></p>
         <p>Based on 
           <strong>UniBraille Viewer</strong> by <a href="https://twitter.com/shunito">Shunsuke Ito</a>.
           The <a href="https://github.com/shunito/bes-viewer">source code</a> is licensed <a href="http://opensource.org/licenses/mit-license.php">MIT</a>.
