@@ -5,12 +5,12 @@ export type Locale = 'ja' | 'en'
 const messages = {
   ja: {
     title: 'UniBraille Viewer α',
-    selectFile: 'ファイル',
+    selectFile: '.besファイル',
     closeFile: 'ファイルを閉じる',
     yomiLabel: '読み',
     show: '表示',
     hide: '非表示',
-    placeholder: 'ファイルを選択してください',
+    placeholder: '「.besファイル」ボタンを押してください',
     backToToc: 'もくじへ もどる',
     toc: '目次',
     backToTocBraille: '⠾⠩⠐⠳⠯⠀⠾⠐⠞⠙'
