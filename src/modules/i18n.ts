@@ -10,7 +10,7 @@ const messages = {
     yomiLabel: '読み',
     show: '表示',
     hide: '非表示',
-    placeholder: '「ファイル」ボタンを押して.besファイルを選択してください',
+    placeholder: 'ファイルを開くと以下に変換結果が表示されます↓',
     backToToc: 'もくじへ もどる',
     toc: '目次',
     backToTocBraille: '⠾⠩⠐⠳⠯⠀⠾⠐⠞⠙'

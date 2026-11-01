@@ -15,7 +15,7 @@
 
           </div>
           <div class="navbar-end">
-            <p class="navbar-item">-----</p>
+            <p class="navbar-item">「ファイル」ボタンを押して.besファイルを選択してください</p>
           </div>
         </div>
       </nav>
