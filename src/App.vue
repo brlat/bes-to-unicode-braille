@@ -10,7 +10,7 @@
           <div class="navbar-start">
             <div class="navbar-item">
               <label for="file">{{ t('selectFile') }}</label>
-              <input type="file" id="file" name="file" accept=".bes,.brf,.brl,.bse" @change="onFileChange" ref="fileInput" />
+              <input type="file" id="file" name="file" accept=".bes,.bet,.brf,.brl,.bse" @change="onFileChange" ref="fileInput" />
             </div>
 
           </div>
@@ -43,6 +43,7 @@
 import { ref, computed, onMounted } from 'vue'
 import Braille from './components/Braille.vue'
 import bes2unicode from './modules/bes2unicode'
+import bet2unicode from './modules/bet2unicode'
 import brf2unicode from './modules/brf2unicode'
 import { useI18n } from './modules/i18n'
 
@@ -65,6 +66,7 @@ const onFileChange = (event: Event) => {
   const file = files[0]
   const ext = file.name.toLowerCase().split('.').pop()
   const isBrfFile = ext === 'brf' || ext === 'brl' || ext === 'bse'
+  const isBetFile = ext === 'bet'
 
   const reader = new FileReader()
   reader.onloadend = (theFile) => {
@@ -78,7 +80,7 @@ const onFileChange = (event: Event) => {
       } else {
         const result = target.result as ArrayBuffer
         const arr = new Uint8Array(result)
-        str.value = bes2unicode(arr)
+        str.value = isBetFile ? bet2unicode(arr) : bes2unicode(arr)
       }
     }
   }
@@ -99,6 +101,7 @@ const onFileClose = () => {
 
 const onGetBesUrl = async (url: string) => {
   const isBrfUrl = url.toLowerCase().endsWith('.brf')
+  const isBetUrl = url.toLowerCase().endsWith('.bet')
   try {
     const response = await fetch(url, { method: 'GET' })
     isBrf.value = isBrfUrl
@@ -107,7 +110,9 @@ const onGetBesUrl = async (url: string) => {
       str.value = brf2unicode(text)
     } else {
       const buf = await response.arrayBuffer()
-      str.value = bes2unicode(new Uint8Array(buf))
+      str.value = isBetUrl
+        ? bet2unicode(new Uint8Array(buf))
+        : bes2unicode(new Uint8Array(buf))
     }
     openFile.value = true
   } catch (error) {
@@ -120,7 +125,7 @@ onMounted(() => {
   const targetUrl = params.get('url')
   if (targetUrl && targetUrl.length > 5) {
     const ext = targetUrl.slice(-4).toLowerCase()
-    if (ext === '.bes' || ext === '.brf') {
+    if (ext === '.bes' || ext === '.bet' || ext === '.brf') {
       onGetBesUrl(targetUrl)
     }
   }

@@ -78,15 +78,18 @@ list['c8'] = '⠨'
 list['d0'] = '⠰'
 list['c0'] = '⠠'
 
-function bes2unicode (bytes:Uint8Array) {
-  const headerByte = 1029
-
+export function decodeBrailleBytes(bytes: Uint8Array, dataOffset: number, skipLeadingPageBreak = false): string {
   let char:string
   let byte:number
   const chars: string[] = []
+  let skippedLeadingPageBreak = !skipLeadingPageBreak
 
-  for (let i = headerByte, n = bytes.length; i < n; i++) {
+  for (let i = dataOffset, n = bytes.length; i < n; i++) {
     byte = bytes[i]
+    if (!skippedLeadingPageBreak && byte === 0xfd) {
+      skippedLeadingPageBreak = true
+      continue
+    }
     char = byte.toString(16)
     if (char.length < 2) {
       char = '0' + char
@@ -100,6 +103,10 @@ function bes2unicode (bytes:Uint8Array) {
     }
   }
   return chars.join('')
+}
+
+function bes2unicode (bytes:Uint8Array) {
+  return decodeBrailleBytes(bytes, 1029)
 }
 
 export default bes2unicode
