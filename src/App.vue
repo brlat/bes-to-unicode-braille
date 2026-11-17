@@ -3,7 +3,7 @@
     <header>
       <nav class="navbar is-dark" :title="t('title')" id="main-header">
         <div class="navbar-brand">
-          <h1 class="navbar-item">サピエ図書館の.bes点字データをユニコード点字に変換</h1>
+          <h1 class="navbar-item">サピエ図書館の.bes .bet、Bookshareなどの.brf点字データをユニコード点字に変換</h1>
         </div>
 
         <div id="navbarMenu" class="navbar-menu is-active">
